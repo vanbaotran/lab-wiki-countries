@@ -1,5 +1,4 @@
 import React from 'react';
-import json from '../countries.json'
 import {Link} from 'react-router-dom'
 
 function CountryDetails(props){
@@ -11,9 +10,11 @@ function CountryDetails(props){
     const theCountry = (oneCountry) =>{
       return oneCountry.cca3 === cca3
     }
-    return json.find(theCountry)
+
+    return Json.find(theCountry) // undefined
   }
-  const foundCountry = getCountry(props.match.params.cca3)
+
+  const foundCountry = getCountry(props.match.params.cca3) // 
   return (
     <div className="col-7">
       <h2>{foundCountry.name.common}</h2>

@@ -1,9 +1,12 @@
 import React from 'react'
-import json from '../countries.json'
+import Json from '../api.js'
 import {Link} from 'react-router-dom'
 
 function CountriesList(){
-    const list = [...json]
+    if(!Json){
+        return 'loading'
+    }
+        const list = [...Json]
     return (
         <div>
             {list.map((el,i)=>{
