@@ -10,7 +10,7 @@ function CountriesList(){
                 return (
                     <div key={i}>
                     <h4>
-                        <Link to={`/countries/${i}`}>{el.name.common}</Link>
+                        {el.flag}<Link to={`/countries/${el.cca3}`}>{el.name.common}</Link>
                     </h4>
                     </div>
                 )
